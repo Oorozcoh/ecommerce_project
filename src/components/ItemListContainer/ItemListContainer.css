@@ -1,0 +1,54 @@
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #0293a7;
+  color: rgb(1, 10, 90);
+  border: 1px solid #07e3f3;
+  border-radius: 10px;
+  padding: 5px;
+  width: 190px;
+  box-shadow: 0 0 10px #05dbf7;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.img-producto {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-detalle {
+  background: #457f91;
+  border: none;
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-detalle:hover {
+  background: #2f5c6b;
+}
+
+.glow {
+    color:rgb(12, 12, 12);
+    text-shadow: 0 0 5px #0509f7, 0 0 10px #0509f7;
+}
+
+p {
+  font-size: 24px;
+  font-weight: bold;
+}
