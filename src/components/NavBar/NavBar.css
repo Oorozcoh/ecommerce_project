@@ -42,14 +42,8 @@
   color: #faea05;
 }
 
-.navbar  h2 {
-
-  Color: rgb(255, 255, 255);
-}
-
-.glow {
-  color: #021617;
-  font-weight: bold;
-  text-shadow: none;
-  padding: 10% 15px;
+.navbar-glow {
+  Color: rgb(12, 12, 12);
+  text-shadow: 0 0 5px #05dbf7, 0 0 10px #05dbf7, 0 0 20px #05dbf7, 0 0 40px #05dbf7, 0 0 60px #05dbf7;
+  font-size: 32px;
 }

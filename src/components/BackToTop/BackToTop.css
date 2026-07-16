@@ -1,0 +1,63 @@
+.back-to-top {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  width: 40px;
+  height: 90px;
+
+  background: #140133;
+  border: 1px solid #00ffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  color: white;
+
+  box-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff;
+
+  transition: 0.3s;
+}
+
+.back-to-top:hover {
+  background: #111827;
+
+  box-shadow:
+    0 0 20px #00ffff,
+    0 0 30px #ff00ff;
+}
+
+.back-to-top span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  color: #ffffff;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.icon-top {
+  margin-top: 10px;
+
+  color: #00ffff;
+  font-size: 20px;
+
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}

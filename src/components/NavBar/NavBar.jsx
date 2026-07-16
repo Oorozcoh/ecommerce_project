@@ -13,7 +13,7 @@ const NavBar = () => {
         alt="logo" 
         className="logo-img"
       />
-      <h2 className="glow">Mi Tienda</h2>
+      <h2 className="navbar-glow">Mi Tienda</h2>
     </div>
 
 

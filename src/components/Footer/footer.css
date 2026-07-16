@@ -1,17 +1,13 @@
 .footer {
-  background: #104c88;
-  color: whitesmoke;
+  background: #140133;
   padding: 20px;
 }
 
 .footer-content {
   text-align: center;
   margin-bottom: 10px;
-}
-
-.footer-bottom {
   text-align: center;
   font-size: 14px;
   font-family: "calibri";
-  color: #ffffff;
+  color: whitesmoke;
 }

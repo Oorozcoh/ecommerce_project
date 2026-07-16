@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
-import { productos } from "../../data/productos";
+import { doc, getDoc } from "firebase/firestore";
+import db from "../../db/db.js";
 import { CartContext } from "../../context/CartContext";
 import "./ItemDetailContainer.css";
+import { toast } from "react-toastify"
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
@@ -20,19 +22,53 @@ const ItemDetailContainer = () => {
   };
 
   useEffect(() => {
-    const getProducto = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(productos.find(p => p.id === itemId));
-      }, 500);
-    });
 
-    getProducto.then(res => setItem(res));
-  }, [itemId]);
+    const getProduct = async () => {
+      try {
+        const productRef = doc(db, "products", itemId);
+        const productDb = await getDoc(productRef);
+
+        if (productDb.exists()) {
+          const data = productDb.data();
+
+          setItem({
+            id: productDb.id,
+            nombre: data.name,
+            categoria: data.category,
+            precio: data.price,
+            imagen: data.image,
+            detalle: data.description,
+            stock: data.stock
+          });
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+  getProduct();
+
+}, [itemId]);
 
 
   const handleAgregar = () => {
+
     agregarAlCarrito(item, cantidad);
+
+    toast.success(
+      `${cantidad} ${item.nombre} agregado al carrito`,
+      {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      }
+    );
+
   };
+
 
   return (
     <div className="detalle-contenedor">
@@ -51,7 +87,9 @@ const ItemDetailContainer = () => {
   </div>
 
   <div className="detalle-derecha">
-    <h2 className="glow">{item.nombre}</h2>
+    <h2 className="titulo-producto">
+      {item.nombre}
+    </h2>
     <div className="separador">
       <hr />
     </div>

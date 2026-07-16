@@ -31,7 +31,7 @@
 }
 
 .btn-detalle {
-  background: #457f91;
+  background: #0a333f;
   border: none;
   padding: 8px;
   color: white;
@@ -45,10 +45,7 @@
 
 .glow {
     color:rgb(12, 12, 12);
-    text-shadow: 0 0 5px #0509f7, 0 0 10px #0509f7;
+    text-shadow: 0 0 5px #05dbf7, 0 0 10px #05dbf7;
+    
 }
 
-p {
-  font-size: 24px;
-  font-weight: bold;
-}

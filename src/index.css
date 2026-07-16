@@ -32,7 +32,7 @@ html, #root {
 }
 
 .main-content {
-  flex: 1; /* 🔥 empuja el footer abajo */
+  flex: 1;
 }
 
 
