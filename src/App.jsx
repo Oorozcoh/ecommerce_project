@@ -1,16 +1,10 @@
-// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-// import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-// import Cart from "./components/Cart/Cart.jsx";
-// import Checkout from "./components/Checkout/Checkout";
-
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
-
-import Layout from "./layout/layout";
+import Layout from "./layout/layout.jsx";
 
 function App() {
   return (
