@@ -4,7 +4,7 @@ import CategoryPage from "./pages/CategoryPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
-import Layout from "./layout/layout.jsx";
+import Layout from "./Layout/layout.jsx";
 
 function App() {
   return (
