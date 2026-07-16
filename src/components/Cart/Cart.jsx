@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../context/CartContext.jsx";
 import "./Cart.css";
 import { toast } from "react-toastify";
 import { FaShoppingCart } from "react-icons/fa";

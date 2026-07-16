@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../context/CartContext.jsx";
 import { addDoc, collection, doc, updateDoc, getDoc } from "firebase/firestore";
 import db from "../../db/db";
 import { toast } from "react-toastify";
